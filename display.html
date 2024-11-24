@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #envelope {
+            width: 200px;
+            height: 130px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #envelope:hover {
+            transform: scale(1.05);
+        }
+
+        #photo {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #letter {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="envelope" onclick="showPhoto()">
+        <h3>📬</h3>
+        <p>Click to Open</p>
+        <button onclick="event.stopPropagation(); showLetter();">Show Letter</button>
+    </div>
+
+    <img id="photo" src="AA415738-6C55-43B2-9675-74E4D16E1B45_1_105_c.jpeg" alt="Your Photo" width="200" />
+
+    <div id="letter">
+        <h3>Your Letter</h3>
+        <p>Dear Chittithalli,</p>
+        <p>I want to take a moment to remind you just how beautiful you are, both in my heart and in my eyes. You are a true treasure.</p>
+        <p>One thing I need to say is that, for me, beauty is not just a word—it's how I feel about you. I aspire to achieve my goals alongside you and make you my partner in this journey. This is my sincere thought, reflecting my maturity and the depth of my feelings.</p>
+        <p>Chittithalli, please understand my comparison: your eyes shine like stars in the sky, captivating and mesmerizing us every time we gaze into them. They bring happiness and wonder, just as the stars do.</p>
+        <p>Your smile is precious; it has the power to lift my spirits, especially when I’m feeling stressed. I truly believe that the beauty of your heart makes you radiant, and this beauty will shine brightly until your last breath. Trust me, you are beautiful inside and out, and that is undeniable.</p>
+        <p>With all my affection,</p>
+        <p>Rohith Gunda</p>
+    </div>
+    
+    <script>
+        function showPhoto() {
+            document.getElementById('photo').style.display = 'block';
+        }
+
+        function showLetter() {
+            document.getElementById('letter').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
